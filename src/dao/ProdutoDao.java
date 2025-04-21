@@ -8,6 +8,7 @@ import java.util.List;
 
 public class ProdutoDao {
 
+    public static final boolean STATUS_ATIVO = true;
     private ConnectionFactory connectionFactory;
 
     public ProdutoDao(ConnectionFactory connectionFactory) {
@@ -26,7 +27,7 @@ public class ProdutoDao {
             PreparedStatement ps = connectionFactory.createConexao().prepareStatement(sql.toString());
             ps.setString(i++,produto.getNome());
             ps.setDouble(i++,produto.getPreco());
-            ps.setBoolean(i,true);
+            ps.setBoolean(i, STATUS_ATIVO);
             ps.execute();
             ps.close();
             connectionFactory.closedConexao();
