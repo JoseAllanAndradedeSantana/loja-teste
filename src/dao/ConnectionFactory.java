@@ -9,7 +9,7 @@ import java.sql.SQLException;
 
 public class ConnectionFactory {
 
-    private HikariDataSource hikariDataSource;
+    private static HikariDataSource hikariDataSource;
 
     public ConnectionFactory(){
         HikariConfig hikariConfig = new HikariConfig();
@@ -21,7 +21,7 @@ public class ConnectionFactory {
         hikariDataSource = new HikariDataSource(hikariConfig);
     }
 
-    public Connection createConexao(){
+    public static Connection createConexao(){
         try {
             return hikariDataSource.getConnection();
             //return DriverManager.getConnection("jdbc:mysql://localhost:3306/loja_allan","root","1234");
