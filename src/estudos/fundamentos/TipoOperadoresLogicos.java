@@ -18,5 +18,10 @@ public class TipoOperadoresLogicos {
         boolean isPlaystationCincoCompravel = valorTotalContaCorrente > valorPlaystationCinco || valorTotalContaPoupanca > valorPlaystationCinco;
         System.out.println(" Playstation 5 Compravel ? : " + isPlaystationCincoCompravel);
 
+        //+= -= *= /=
+        double bonus = 1800;
+        bonus += 1000;
+        System.out.println(bonus);
+
     }
 }
