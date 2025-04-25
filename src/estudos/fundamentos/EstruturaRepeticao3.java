@@ -8,7 +8,7 @@ public class EstruturaRepeticao3 {
         double valorCarro = 40000;
         for (int parcela = 1; parcela <= valorCarro; parcela++){
             double valorParcela = valorCarro / parcela;
-            
+
             if(valorParcela >= 1000){
                 System.out.println(valorParcela);
             }else{
