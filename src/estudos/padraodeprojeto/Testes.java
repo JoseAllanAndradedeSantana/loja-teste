@@ -1,6 +1,6 @@
 package estudos.padraodeprojeto;
 
-public class TesteSingleton {
+public class Testes {
     public static void main(String[] args) {
         System.out.println("TESTANDO INSTANCIA LAZY");
         SingletonLazy lazy = SingletonLazy.getInstance();
@@ -19,5 +19,20 @@ public class TesteSingleton {
         System.out.println(lazyHolder);
         lazyHolder = SingletonLazyHolder.getInstance();
         System.out.println(lazyHolder);
+
+        Comportamento comportamentoNormal = new ComportamentoNormal();
+        Comportamento comportamentoDefensivo = new ComportamentoDefensivo();
+        Comportamento comportamentoAgressivo = new ComportamentoAgressivo();
+
+        Robo robo = new Robo();
+        robo.setComportamento(comportamentoNormal);
+        robo.mover();
+        robo.setComportamento(comportamentoDefensivo);
+        robo.mover();
+        robo.setComportamento(comportamentoAgressivo);
+        robo.mover();
+
+        Facede facede = Facede.getInstance();
+        facede.migrarCliente("Jose Allan Andrade de Santana","11090-100");
     }
 }
